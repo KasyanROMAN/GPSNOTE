@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseContentPage  xmlns:views="clr-namespace:GPSNotepad.Views"
+                        xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="GPSNotepad.Views.SignUpView">
+
+
+    <StackLayout>
+        <Entry Placeholder="Name" Text="{Binding Name}"
+               VerticalOptions="EndAndExpand" 
+               WidthRequest="250"
+               HorizontalOptions="CenterAndExpand"/>
+        <Entry Placeholder="Mail" 
+               Text="{Binding Mail}"
+               WidthRequest="250"
+               HorizontalOptions="CenterAndExpand"/>
+        <Entry Placeholder="Password" 
+               IsPassword="true"
+               Text="{Binding Password}"
+               VerticalOptions="StartAndExpand" 
+               WidthRequest="250"
+               HorizontalOptions="CenterAndExpand" />
+        <Button Text="SIGN UP"
+                Command="{Binding OnSignUpCommand}"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="250"
+                VerticalOptions="StartAndExpand"/>
+    </StackLayout>
+</views:BaseContentPage>
